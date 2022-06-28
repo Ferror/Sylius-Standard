@@ -51,5 +51,4 @@ jobs:
                     tags: ferror/sylius-demo:${{ matrix.target }}
                     cache-from: type=gha
                     cache-to: type=gha
-                    load: true
                     target: ${{ matrix.target }}
