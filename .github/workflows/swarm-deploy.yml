@@ -23,7 +23,6 @@ jobs:
             fail-fast: false
             matrix:
                 platform: [linux/amd64,linux/arm64]
-                docker_compose: [docker-compose.yml,docker-compose.prod.yml]
                 target: [sylius_nginx,sylius_php]
         
         runs-on: ubuntu-latest
