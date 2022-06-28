@@ -1,6 +1,6 @@
 services:
     php:
-        image: ferror/sylius-demo:sylius_nginx
+        image: ferror/sylius-demo:sylius_php_prod
         deploy:
             endpoint_mode: vip
             mode: replicated
@@ -61,7 +61,7 @@ services:
             - sylius
     
     nginx:
-        image: ferror/sylius-demo:sylius_php
+        image: ferror/sylius-demo:sylius_nginx
         deploy:
             endpoint_mode: vip
             mode: replicated
