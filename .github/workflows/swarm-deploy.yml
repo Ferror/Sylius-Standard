@@ -48,6 +48,7 @@ jobs:
                 with:
                     push: true
                     platforms: ${{ matrix.platform }}
+                    context: "{{defaultContext}}"
                     tags: ferror/sylius-demo:${{ matrix.target }}
                     cache-from: type=gha
                     cache-to: type=gha
