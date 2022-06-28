@@ -14,7 +14,7 @@ on:
 
 jobs:
     build-image:
-        name: Build and Push Docker Image [${{ matrix.platform }}, ${{ matrix.target }}
+        name: Build and Push Docker Image [${{ matrix.platform }}, ${{ matrix.target }}]
         env:
             MYSQL_PASSWORD: sylius-mysql
             DOCKER_BUILDKIT: 1 # Requires Latest Buildx in docker CLI
