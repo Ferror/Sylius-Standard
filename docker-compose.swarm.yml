@@ -51,7 +51,7 @@ services:
                     cpus: "1"
                     memory: 512M
         environment:
-            MYSQL_RANDOM_ROOT_PASSWORD: true
+            MYSQL_RANDOM_ROOT_PASSWORD: 0
             MYSQL_DATABASE: sylius_prod
             MYSQL_USER: sylius
             MYSQL_PASSWORD: ${MYSQL_PASSWORD:?MYSQL_PASSWORD is not set or empty}
