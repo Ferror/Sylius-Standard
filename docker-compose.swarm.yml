@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
     php:
         image: ferror/sylius-demo:sylius_php_prod
@@ -45,7 +47,8 @@ services:
         image: mysql:5.7
         deploy:
             endpoint_mode: vip
-            mode: global
+            mode: replicated
+            replicas: 3
             resources:
                 reservations:
                     cpus: "1"
@@ -98,7 +101,7 @@ services:
         networks:
             - sylius
         ports:
-            - 80:80
+            - "80:80"
 
 networks:
     sylius:
