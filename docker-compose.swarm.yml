@@ -48,7 +48,7 @@ services:
         deploy:
             endpoint_mode: vip
             mode: replicated
-            replicas: 3
+            replicas: 1
             resources:
                 reservations:
                     cpus: "1"
