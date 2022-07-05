@@ -37,6 +37,8 @@ services:
         environment:
             DATABASE_URL: mysql://sylius:sylius_mysql_password@mysql/sylius_prod
             PHP_DATE_TIMEZONE: ${PHP_DATE_TIMEZONE:-UTC}
+            APP_ENV: prod
+            APP_DEBUG: 0
 #        volumes:
 #            - ./public/media:/srv/sylius/public/media:rw
         networks:
@@ -118,6 +120,8 @@ services:
             replicas: 1
             placement:
                 constraints: [ node.role == manager ]
+        networks:
+            - sylius
 
 networks:
     sylius:
