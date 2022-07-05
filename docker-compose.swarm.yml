@@ -35,7 +35,7 @@ services:
         depends_on:
             - mysql
         environment:
-            DATABASE_URL: mysql://sylius:${MYSQL_PASSWORD}@mysql/sylius_prod
+            DATABASE_URL: mysql://sylius:sylius_mysql_password@mysql/sylius_prod
             PHP_DATE_TIMEZONE: ${PHP_DATE_TIMEZONE:-UTC}
 #        volumes:
 #            - ./public/media:/srv/sylius/public/media:rw
