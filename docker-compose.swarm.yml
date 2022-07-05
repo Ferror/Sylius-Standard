@@ -38,7 +38,6 @@ services:
             DATABASE_URL: mysql://sylius:${MYSQL_PASSWORD}@mysql/sylius_prod
             PHP_DATE_TIMEZONE: ${PHP_DATE_TIMEZONE:-UTC}
         volumes:
-            - ./var/sessions:/srv/sylius/var/sessions:rw
             - ./public/media:/srv/sylius/public/media:rw
         networks:
             - sylius
