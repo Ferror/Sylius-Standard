@@ -57,7 +57,7 @@ COPY templates templates/
 COPY translations translations/
 
 RUN set -eux; \
-    mkdir -p var/cache var/log; \
+    mkdir -p var/cache var/log var/sessions; \
     composer dump-autoload --classmap-authoritative; \
     APP_SECRET='' composer run-script post-install-cmd; \
     chmod +x bin/console; sync; \
@@ -65,7 +65,6 @@ RUN set -eux; \
     bin/console sylius:theme:assets:install public --no-interaction
 
 VOLUME /srv/sylius/var
-
 VOLUME /srv/sylius/public/media
 
 COPY docker/php/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
